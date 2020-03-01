@@ -17,15 +17,11 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/1.0.1/pure-min.css">
     <style>
     body {
-    /* 
-    font-family: 'Quattrocento Sans', sans-serif; 
-    font-family: 'Major Mono Display', monospace;
-    */
       font-family: 'Fira Mono', monospace;
+      font-size: 1.6rem;
       padding: 1.3rem;
       background-color: #201A1E;
       color: #F2F0F3;
-      font-size: 1.6rem;
     }
 
     h1, h2, h3 {
@@ -46,11 +42,19 @@
       background-color: #CB7529;
       text-decoration: none;
     }
+    
     .comma:not(:last-of-type):after {
       content: ",";
     }
 
+    .container {
+      width: 60%;
+    }
+
     @media only screen and (max-width: 600px) {
+      body {
+        font-size: 1em;
+      }
       a {
         display: block;
         margin: .5rem 0;
@@ -58,8 +62,8 @@
       .comma:not(:last-of-type):after {
         content: none;
       }
-      p {
-        font-size: ;
+      .container {
+        width: 100%;
       }
     }
 
