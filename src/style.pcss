@@ -1,0 +1,39 @@
+
+@tailwind base;
+
+/*
+to get the correct font face use this 
+https://google-webfonts-helper.herokuapp.com/fonts
+*/
+
+/* major-mono-display-regular - latin */
+@font-face {
+  font-family: 'Major Mono Display';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Major Mono Display Regular'), local('MajorMonoDisplay-Regular'),
+       url('./fonts/major-mono-display-v4-latin-regular.woff2') format('woff2');
+}
+
+
+/* fira-mono-regular - latin */
+@font-face {
+  font-family: 'Fira Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Fira Mono Regular'), local('FiraMono-Regular'),
+       url('./fonts/fira-mono-v8-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+}
+
+@tailwind components;
+@tailwind utilities;
+
+
+@responsive {
+  .comma-without:not(:last-of-type):after {
+    content: none;
+  }
+  .comma-with:not(:last-of-type):after {
+    content: ",";
+  }
+}
