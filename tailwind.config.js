@@ -12,6 +12,7 @@ module.exports = {
       dark: '#201A1E',
       light: '#F2F0F3',
       highlight: '#CB7529',
+      valis: '#AFC0C3',
     }
   },
   variants: {},
