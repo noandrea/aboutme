@@ -112,11 +112,12 @@
       <a href="https://hub.docker.com/u/noandrea" target="_blank" rel="noopener">
         <img class="rounded w-8 h-8 mr-2" src="/media/docker.svg" alt="noandrea's docker hub">
       </a>
-      <a class="rounded h-8 text-xs float-right border-2 border-light leading-none px-2 cursor-pointer text-center" rel="noopener" onclick="copy(this)"
+      <a class="rounded h-8 text-xs float-right border-2 border-light leading-none px-2 cursor-pointer text-center"
+        rel="noopener" onclick="copy(this)"
         data-ssh="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCh8EW792+8FQxOPrZRHftVLh80D4nO5MLtlffsprMn4+IXp4wryfdJxc513bXkVq/m5H/c/eZgLEhQJSLH6WEQiOvqf8BYEqrOIVxiAfuP07dXw1z56m5EXF7VFTNJ3Idc5deXqwMoJ70Sr232XiOyWa247yhyKU1Uftd0EpM0O06ENnUOxmhbs7D9eX/xlo7XCzw+nialQ31xAdgwD1cVEr5ytO12HM/8Sa1nLM8mUpkEcodidMm+JoyjRw752LrCMVak5K7NJ/GYNPDwYgBV2ADyc3uyeIOgheQ5WjBtFx4lkeB6O8JXaCM6g6GyPLdMDr+gz75gRAumBEvUzHbZ adgb.me">
-        copy <br>ssh <svg class=" h-4 color-light fill-current inline-block "
-          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
-          viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+        copy <br>ssh <svg class=" h-4 color-light fill-current inline-block " xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100"
+          enable-background="new 0 0 100 100" xml:space="preserve">
           <path
             d="M41.7,37.5c0-6.9-5.6-12.5-12.5-12.5h-8.3c-6.9,0-12.5,5.6-12.5,12.5v16.7c0,6.9,5.6,12.5,12.5,12.5h8.3  c6.9,0,12.5-5.6,12.5-12.5V50h25v16.7H75V50h8.3v16.7h8.3V50v-8.3h-50V37.5z M33.3,54.2c0,2.3-1.9,4.2-4.2,4.2h-8.3  c-2.3,0-4.2-1.9-4.2-4.2V37.5c0-2.3,1.9-4.2,4.2-4.2h8.3c2.3,0,4.2,1.9,4.2,4.2V54.2z">
           </path>
@@ -128,9 +129,6 @@
       <script>
         function copy(ele) {
           const pk = ele.dataset.ssh;
-          sp = document.getElementById("x");
-
-
           /* Get the text field */
           if (!navigator.clipboard) {
             //fallbackCopyTextToClipboard(ele.pubkey);
