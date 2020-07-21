@@ -141,16 +141,17 @@
 
   </div>
   <script type="text/javascript">
-    document.getElementById("ssh").addEventListener("click", function (evt) {
-      const pk = evt.target.dataset.ssh;
-      if (!navigator.clipboard) {
-        alert("copy not supported, but you can still copy it by hand: " + pk)
+    document.getElementById("ssh").addEventListener("click", (event) => {
+      const pk = (event.target || event.srcElement).dataset.ssh;
+      const cp = navigator.clipboard;
+      const em = "whoopsy, better copy it by hand:" + pk;
+      if (!cp) {
+        alert(em);
         return;
       }
-      navigator.clipboard.writeText(pk).then(function () {
-        console.log('ssh key copied');
-      }, function (err) {
-        alert("copy not supported, but you can still copy it by hand: " + pk)
+      cp.writeText(pk).then(() => { }, (err) => {
+        console.log(err);
+        alert(em);
       });
     });
   </script>
