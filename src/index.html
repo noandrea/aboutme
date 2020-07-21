@@ -22,20 +22,6 @@
         "description": "Andrea's personal page"
       }
     </script>
-  <script type="text/javascript">
-    function copy(ele) {
-      const pk = ele.dataset.ssh;
-      if (!navigator.clipboard) {
-        alert("copy not supported, do a manual copy: " + pk)
-        return;
-      }
-      navigator.clipboard.writeText(pk).then(function () {
-        console.log('ssh key copied');
-      }, function (err) {
-        alert("copy not supported, do a manual copy: " + pk)
-      });
-    }
-  </script>
 </head>
 
 <body class="bg-dark text-light font-body text-lg px-4 py-8">
@@ -126,9 +112,8 @@
       <a href="https://hub.docker.com/u/noandrea" target="_blank" rel="noopener">
         <img class="rounded w-8 h-8 mr-2" src="/media/docker.svg" alt="noandrea's docker hub">
       </a>
-      <button
+      <button id="ssh"
         class="rounded h-8 text-xs float-right border-2 border-light leading-none px-2 cursor-pointer text-center hover:bg-light hover:text-dark"
-        rel="noopener" onclick="copy(this)"
         data-ssh="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCh8EW792+8FQxOPrZRHftVLh80D4nO5MLtlffsprMn4+IXp4wryfdJxc513bXkVq/m5H/c/eZgLEhQJSLH6WEQiOvqf8BYEqrOIVxiAfuP07dXw1z56m5EXF7VFTNJ3Idc5deXqwMoJ70Sr232XiOyWa247yhyKU1Uftd0EpM0O06ENnUOxmhbs7D9eX/xlo7XCzw+nialQ31xAdgwD1cVEr5ytO12HM/8Sa1nLM8mUpkEcodidMm+JoyjRw752LrCMVak5K7NJ/GYNPDwYgBV2ADyc3uyeIOgheQ5WjBtFx4lkeB6O8JXaCM6g6GyPLdMDr+gz75gRAumBEvUzHbZ adgb.me">
         copy <br>ssh <svg class=" h-4 color-light fill-current inline-block " xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100"
@@ -155,6 +140,20 @@
     </footer>
 
   </div>
+  <script type="text/javascript">
+    document.getElementById("ssh").addEventListener("click", function (evt) {
+      const pk = evt.target.dataset.ssh;
+      if (!navigator.clipboard) {
+        alert("copy not supported, but you can still copy it by hand: " + pk)
+        return;
+      }
+      navigator.clipboard.writeText(pk).then(function () {
+        console.log('ssh key copied');
+      }, function (err) {
+        alert("copy not supported, but you can still copy it by hand: " + pk)
+      });
+    });
+  </script>
 </body>
 
 </html>
