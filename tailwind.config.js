@@ -5,7 +5,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      body: ['"Fira Mono"', 'monospace'],
+      body: ['"Iosevka Aile"', 'sans-serif'],
       title: ['"Major Mono Display"', 'monospace'],
     },
     colors: {
