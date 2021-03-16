@@ -6,7 +6,7 @@ CV_FONT_EXT     = .ttf
 CV_FONT_REGULAR = *-Regular
 CV_FONT_BOLD    = *-Bold
 CV_FONT_ITALIC  = *-Italic
-CV_OUTFILE      = ./AndreaGiacobino.CV.pdf
+CV_OUTFILE      = ./src/AndreaGiacobino.CV.pdf
 
 #  --table-of-contents
 
